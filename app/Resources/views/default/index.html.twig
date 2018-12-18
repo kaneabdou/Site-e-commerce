@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container" style="margin: 10px 200px">
+    {% for produit in list %}
+        <div class="card mb-3" style="width:300px ;float:left;margin-left:5px">
+            <h3 class="card-header active" >{{produit.name}}</h3>
+            <div class="card-body">
+                <h5 class="card-title">Publié le {{ produit.dateAtCreate|date('d/m/Y')}} à</h5>
+                <h6 class="card-subtitle text-muted">{{produit.dateAtCreate|date('H:i')}}</h6>
+            </div>
+            <img style="height: 200px; width: 100%; display: block;" src="#" alt="Card image">
+            <h4 class="card-header active" >Prix:{{produit.price}}€ <button class="btn-success" style="float: right">Commander</button></h4>
+
+        </div>
+
+    {% endfor %}
+        </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

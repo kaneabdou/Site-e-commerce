@@ -1,0 +1,28 @@
+{% extends "adminbase.html.twig" %}
+
+{% block title %}AppBundle:Admin:list{% endblock %}
+
+{% block body %}
+<h1>Liste de tous les produits</h1>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom du produit</th>
+                <th scope="col">Description</th>
+                <th scope="col">Prix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>12</td>
+                <td>Chemise</td>
+                <td>Couleur noir</td>
+                <td>100€</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

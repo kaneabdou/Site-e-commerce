@@ -1,0 +1,17 @@
+{% extends "adminbase.html.twig" %}
+{% form_theme myForm 'bootstrap_4_layout.html.twig' %}
+{% block title %}AppBundle:Admin:insert{% endblock %}
+{% block stylesheet %}
+
+{% endblock %}
+{% block body %}
+    <h1>Ajouter un produit</h1>
+    <div>
+        <tr>{{ form_start(myForm) }}</tr>
+        <tr><td>{{ form_row(myForm.name) }}</td></tr>
+        <tr><td>{{ form_row(myForm.description) }}</td></tr>
+        <tr><td>{{ form_row(myForm.price) }}</td></tr>
+        <tr><td><button class="btn btn-success" href="#">Enregistrer</button></td></tr>
+    {{ form_end(myForm) }}
+    </div>
+{% endblock %}

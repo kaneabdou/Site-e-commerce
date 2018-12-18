@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Accueil{% endblock %}</title>
+        {% block stylesheet %}
+        <style>
+            body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
+            h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+            h1 { font-size: 36px; }
+            h2 { font-size: 21px; margin-bottom: 1em; }
+            p { margin: 0 0 1em 0; }
+            a { color: #0000F0; }
+            a:hover { text-decoration: none; }
+            code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
+            #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+            #container { padding: 2em; }
+            #welcome, #status { margin-bottom: 2em; }
+            #welcome h1 span { display: block; font-size: 75%; }
+            #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
+            #icon-book { display: none; }
+
+            @media (min-width: 768px) {
+                #wrapper { width: 80%; margin: 2em auto; }
+                #icon-book { display: inline-block; }
+                #status a, #next a { display: block; }
+
+                @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+                @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+                .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+            }
+        </style>
+        {% endblock %}
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    </head>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Inst'Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Voir les produits par catégories</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" style="margin-left: 850px" href="#">Connexion</button>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+        {% block body %}
+
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+
+</html>
